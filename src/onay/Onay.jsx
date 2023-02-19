@@ -8,7 +8,7 @@ const Onay = () => {
         
             <input className='form-check-input' id="kosul" type="checkbox" onChange={()=>setTikli(!tikli)} />
             <label className='mx-2' htmlFor="kosul">Kosulları anladım ve kabul ediyorum</label>
-            <button disabled={!tikli} className='btn btn-sm btn-outline-success mx-2'>
+            <button disabled={!tikli} className='btn btn-sm btn-success mx-2'>
              Siparişi Onayla
                 </button>   
             

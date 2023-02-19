@@ -12,6 +12,12 @@ const Cesit = () => {
       .then((res) => setCesits(res.data))
       .catch((err) => console.log(err));
   }, []);
+ 
+  const handleReset =(param)=>{
+    const reset = shop.filter((item)=>item.name!==param.name);
+    setShop(reset)
+  }
+
   const adet = (cesit) => {
     const miktar = shop.filter((item) => item.name === cesit.name);
     return miktar.length;
@@ -19,7 +25,7 @@ const Cesit = () => {
   return (
     <div className="container mt-3 mb-2">
       <h2>Çeşitler Tanesi 2 $</h2>
-      <h3>Ücret Toplam:{shop.length * 2}$</h3>
+      <h3>Ücret Toplam:  {shop.length * 2}  $</h3>
       <div className="container d-flex justify-content-center mt-5 gap-5">
         {cesits.map((cesit) => {
 
@@ -33,12 +39,14 @@ const Cesit = () => {
               <img src={cesit.imagePath} className="w-100" alt="" />
               <p>{cesit.name}</p>
               <div className="d-flex gap-2">
-                <button className="btn btn-sm btn-outline-danger">
+                <button 
+                className="btn btn-sm btn-danger"
+                onClick={()=>handleReset(cesit)}>
                   Sıfırla
                 </button>
                 <span className="lead">{miktar}</span>
                 <button
-                  className="btn btn-sm btn-outline-warning"
+                  className="btn btn-sm btn-warning"
                   onClick={() => setShop([...shop, cesit])}
                 >
                   Ekle
