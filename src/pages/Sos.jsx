@@ -26,11 +26,11 @@ const Sos = () => {
     <div className="container mt-5">
       <h1>Soslar Tanesi 1 $</h1>
       <h2>Ücret Toplam: {sepet.length * 1} $ </h2>
-      <div className="row gap-3">
+      <div className=" container  mt-4 row gap-3">
         {sosData.map((sos) => (
           <div
             key={sos.name}
-            className="d-flex flex-column align-items-center gap-3"
+            className="container d-flex flex-column justify-content-between align-items-center gap-3"
             style={{ width: '150px' }}
           >
             <img src={sos.imagePath} className="w-100" alt="sos" title="sos" />
