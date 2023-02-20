@@ -10,7 +10,7 @@ import userEvent from "@testing-library/user-event"
 
 test("Veriler ekrana basıldı mı?",async()=>{
     render(<Cesit/>)
-    const image =await screen.findAllByRole('img',{name:'cesitler'})
+    const image =await screen.findAllByRole('img',{name:'cesit'})
     expect(image).toHaveLength(4);
 })
 
