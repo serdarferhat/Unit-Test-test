@@ -36,7 +36,7 @@ const Cesit = () => {
               className="d-flex flex-column"
               style={{ width: "150px" }}
             >
-              <img src={cesit.imagePath} className="w-100" alt="" />
+              <img src={cesit.imagePath} alt="cesit" className="w-100"  />
               <p>{cesit.name}</p>
               <div className="d-flex gap-2">
                 <button 

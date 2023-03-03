@@ -36,7 +36,7 @@ test("Sepeti sıfırlama",async()=>{
 
     //sıfırlama ve ekleme ortak yukardaki
     const addBtn= await screen.findAllByRole('button',{name:/ekle/i});
-    const resetBtn = await screen.findAllByRole('button',{name:/sıfırla/i});
+    const resetBtn = await screen.findAllByRole('button',{name:"Sıfırla"});
     const shop = screen.getByText(/ücret toplam:/i);
 //ekle
     await user.click(addBtn[2]);
